@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  comfyui:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: comfyui-worker
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - SERVE_API_LOCALLY=true
+    ports:
+      - "8000:8000"
+      - "8188:8188"
+    volumes:
+      - "C:/SVILUPPO/docker/_VOLUMES/comfy-volume/output:/comfyui/output"
+      - "C:/SVILUPPO/docker/_VOLUMES/comfy-volume/data:/data"
