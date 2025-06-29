@@ -6,6 +6,14 @@ export LD_PRELOAD="${TCMALLOC}"
 
 cd comfyui/custom_nodes
 git clone https://github.com/ltdrdata/ComfyUI-Manager.git
+
+cd /comfyui
+git fetch
+git pull
+
+echo "Installing requirements.txt"
+pip3 install --upgrade -r requirements.txt
+
 cd /
 
 echo "Starting ComfyUI"

@@ -10,5 +10,7 @@ comfyui:
   upscale_models: models/upscale_models/
   vae: models/vae/
   unet: models/unet/
-  ipadapter: models/ipadapter
-  custom_nodes: custom_nodes/
+  ipadapter: models/ipadapter/
+  text_encoders: models/text_encoders/
+  llm: models/llm
+  #custom_nodes: custom_nodes/

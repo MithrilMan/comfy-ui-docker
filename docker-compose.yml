@@ -20,5 +20,6 @@ services:
       - "8000:8000"
       - "8188:8188"
     volumes:
-      - "C:/SVILUPPO/docker/_VOLUMES/comfy-volume/output:/comfyui/output"
-      - "C:/SVILUPPO/docker/_VOLUMES/comfy-volume/data:/data"
+      - "../../docker-volumes/comfy-volume/data/models:/comfyui/models"
+      - "../../docker-volumes/comfy-volume/data/output:/comfyui/output"
+      - "./src/extra_model_paths.yaml:/comfyui/extra_model_paths.yaml"
