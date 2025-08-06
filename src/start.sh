@@ -6,8 +6,12 @@ export LD_PRELOAD="${TCMALLOC}"
 
 cd comfyui/custom_nodes
 git clone https://github.com/ltdrdata/ComfyUI-Manager.git
+cd ComfyUI-Manager
+git fetch
+git pull
 
 cd /comfyui
+git checkout master
 git fetch
 git pull
 
